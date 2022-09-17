@@ -30,10 +30,10 @@ class StudentSerializer(serializers.ModelSerializer):
     #     return f'{obj.first_name}{obj.last_name}'
     # def get_number_name(self,obj):
     #     return f'{obj.number}{obj.first_name}'
-    path = serializers.StringRelatedField()
-    path_id = serializers.IntegerField()
+    path=serializers.StringRelatedField()
+    path_id=serializers.IntegerField()
     class Meta:
         model = Student
-        fields = ["id","path_id","path", "first_name", "last_name", "number"]
+        fields = ["id","path_id","path","first_name", "last_name", "number"]
         # fields = '__all__'
         # exclude = ['number']
